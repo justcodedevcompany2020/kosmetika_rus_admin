@@ -1,0 +1,26 @@
+.selectCategory {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-right: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.selectCategory>p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.filtrCategory {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    height: 150px;
+    overflow-y: scroll;
+    position: absolute;
+    top: 40px;
+}
+
+.header>p {
+    font-family: 'Montserrat', sans-serif;
+}

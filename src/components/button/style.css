@@ -1,0 +1,66 @@
+.button {
+    border-radius: 10px;
+    border: 1px solid #373737;
+    width: 230px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.greenButton {
+    border-radius: 10px;
+    width: 230px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: linear-gradient(140deg, #9AC6AD 0%, #C2ECD4 100%), #878787;
+}
+
+.blackButton {
+    border-radius: 10px;
+    width: 230px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: #373737
+}
+
+#aciveButton {
+    background: linear-gradient(180deg, #EDDFCB 0%, #DBC3A0 100%), #373737;
+    border: none;
+}
+
+#activeText {
+    color: white;
+
+}
+
+.button>p {
+    color: #373737;
+    font-family: 'Montserrat', sans-serif !important;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.greenText {
+    color: #FFF;
+    font-family: 'Montserrat', sans-serif !important;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.black {
+    color: white;
+}

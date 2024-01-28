@@ -1,0 +1,104 @@
+.UserProduct {
+    border: 1px solid #373737;
+    border-radius: 10px;
+    width: 100%;
+    padding: 40px;
+}
+
+.TableItemUserProduct {}
+
+.UserProductItem {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(22, 22, 22, 0.25);
+    padding: 20px;
+}
+
+#last {
+    border: none !important;
+    padding-bottom: 0;
+
+}
+
+.UserProductImg {
+    width: 50px;
+}
+
+.ImgWrapperUserProduct {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.UserProductText {
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Artikle {
+    color: #373737;
+    font-family: 'Montserrat', sans-serif !important;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+}
+
+.Krem {
+    color: #373737;
+    font-family: 'Montserrat', sans-serif !important;
+
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    text-transform: lowercase;
+}
+
+.volume {
+    color: #71727A;
+    font-family: 'Montserrat', sans-serif !important;
+
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.UserProductColume {
+    display: flex;
+    gap: 100px;
+    width: 50%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.UserProductPrice {
+    display: flex;
+    gap: 20px;
+}
+
+.userProductAmount {
+    color: #373737;
+    font-family: 'Montserrat', sans-serif !important;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+}
+
+.userProductSale {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif !important;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    text-decoration-line: line-through;
+    text-transform: uppercase;
+    opacity: 0.35;
+}

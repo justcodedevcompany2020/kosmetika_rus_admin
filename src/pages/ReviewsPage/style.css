@@ -1,0 +1,25 @@
+.header>p {
+    color: #373737;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+    font-family: 'Montserrat', sans-serif !important;
+
+}
+
+.ReviewWrapper {
+    margin: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.ReviewsPageButtonWrapper {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}

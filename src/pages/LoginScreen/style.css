@@ -1,0 +1,24 @@
+.loginScreenInputWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.LoginScreen {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.LoginText {
+    font-size: 40px;
+    text-align: center;
+}
+
+.errorLogin {
+    font-size: 13px;
+    color: red;
+}

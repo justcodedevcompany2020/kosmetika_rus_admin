@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header>p {
+    color: #373737;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+}
+
+.buttonWrapper {
+    display: flex;
+    gap: 20px;
+}
+
+.TableWrapper {
+    margin: 40px 0;
+}

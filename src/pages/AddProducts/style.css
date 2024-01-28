@@ -1,0 +1,71 @@
+.Productinput {
+    border-radius: 10px;
+    border: 1px solid #878787;
+    height: 48px;
+    padding: 0 20px;
+    width: 280px;
+}
+
+.firstBlock {
+    display: flex;
+    gap: 30px;
+}
+
+.header>p {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 700;
+}
+
+.AddProductBlock1 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 60px 0;
+}
+
+.ProductTextArea {
+    border-radius: 10px;
+    border: 1px solid #878787;
+    height: 48px;
+    padding: 10px;
+    width: 380px;
+    resize: none;
+    height: 150px
+}
+
+.ProductSelect {
+    border-radius: 10px;
+    width: 300px;
+    height: 48px;
+}
+
+.FormControl {
+    border-radius: 20px !important;
+}
+
+.createButon {
+    background-color: white !important;
+    border: none !important;
+    box-shadow: none;
+    color: black !important;
+}
+
+.creatProductButton {
+    border-radius: 10px;
+    background: linear-gradient(140deg, #9AC6AD 0%, #C2ECD4 100%), #FFF;
+    width: 300px;
+    height: 60px;
+    margin: auto;
+    border: none;
+    color: white;
+}
+
+.LableDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.LableDiv>label {
+    font-family: 'Montserrat';
+}

@@ -1,0 +1,36 @@
+.SinglProductButton {
+    border-radius: 10px;
+    background: linear-gradient(140deg, #9AC6AD 0%, #C2ECD4 100%);
+    border: none;
+    color: white;
+    height: 40px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 190px;
+    gap: 10px;
+}
+
+.SinglProductHeader {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.SelectButton {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;
+}
+
+.SelectButton>div:hover {
+    color: green;
+    cursor: pointer;
+}

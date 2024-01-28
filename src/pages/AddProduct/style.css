@@ -1,0 +1,127 @@
+.activePopup {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+}
+
+.inactive {
+  display: none;
+}
+
+.pop {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.popupHeader {
+  width: 100%;
+  height: 65px;
+  background: #e0c18f;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  gap: 20px;
+}
+
+.closeIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.closeIcon:hover {
+  background: #d1b587;
+}
+
+.popupHeader>h1 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1.75rem;
+  text-transform: none;
+}
+
+.popupBody {
+  max-width: 1200px;
+  width: 100%;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.catsAndSubcats {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 31%;
+}
+
+.AddImg {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  border: 1px solid #878787;
+}
+
+.AddImg>img {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #878787;
+  border-radius: 10px;
+  margin: auto;
+}
+
+.AddImg>p {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.createButon {
+  background: #d1b587 !important;
+  color: #000 !important;
+}
+
+.createButon:hover {
+  background: #b89e76 !important;
+  color: #000 !important;
+}
+
+.eachProductPhoto {
+  width: 17%;
+  height: 200px;
+  position: relative;
+}
+
+.eachProductPhoto>img {
+  width: 100%;
+  height: 100%;
+}
+
+.deletePhoto {
+  width: 30px;
+  height: 30px;
+  background: rgb(209, 209, 209);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: -13px;
+  top: -13px;
+  cursor: pointer;
+}

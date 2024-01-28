@@ -1,0 +1,30 @@
+.PopUp {
+    width: 100%;
+    height: 100%;
+    /* opacity: 0.5; */
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.PopUpButton {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.PopUpDiv>textarea {
+    width: 650px;
+    height: 200px;
+    flex-shrink: 0;
+    background-color: white;
+    border-radius: 10px;
+    background: #FFF;
+    padding: 40px;
+
+}

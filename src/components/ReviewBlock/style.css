@@ -1,0 +1,66 @@
+.ReviewBlockDiv {
+    width: 45%;
+}
+
+.ReviewBlock {
+    border-radius: 10px;
+    border: 1px solid #373737;
+    padding: 20px;
+}
+
+.ReviewName {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.ReviewName>p {
+    color: #373737;
+    font-family: 'Montserrat', sans-serif !important;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.Stars {
+    display: flex;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    gap: 2px !important;
+}
+
+.Review {
+    margin: 20px 0;
+    color: #373737;
+    font-family: 'Montserrat', sans-serif !important;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 80%;
+}
+
+.textReview {
+    color: #878787;
+    font-family: 'Montserrat', sans-serif !important;
+
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.textReviewDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.ReviewbuttonWrapper {
+    display: flex;
+    margin: 20px 0;
+    justify-content: space-between;
+}

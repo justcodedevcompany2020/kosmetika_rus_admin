@@ -1,0 +1,37 @@
+.UserScreen {
+    margin-bottom: 60px;
+}
+
+.BackClass {
+    color: #373737;
+    font-family: 'Montserrat', sans-serif !important;
+
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 0.25;
+    cursor: pointer;
+}
+
+.TitleHeader {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.UserName {
+    color: #373737;
+    font-family: 'Montserrat', sans-serif !important;
+
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+}
+
+.UserScreenHeader {
+    display: flex;
+    gap: 200px;
+    margin-bottom: 100px;
+}
