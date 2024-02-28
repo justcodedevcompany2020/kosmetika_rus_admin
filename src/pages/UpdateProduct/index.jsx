@@ -7,7 +7,7 @@ import InputLabel from '@mui/material/InputLabel'
 import FormControl from '@mui/material/FormControl'
 import { Button, Checkbox, ListItemText, OutlinedInput } from '@mui/material'
 import { useDispatch, useSelector } from 'react-redux'
-import { GetBrandAction, GetCategory, GetCollectionAction, GetForAge, GetGendersAction, GetPlatforms, GetSinglProductAction, GetTypePeau, UpdateProduct } from '../../Services/action/action'
+import { ChangeOrderHit, GetBrandAction, GetCategory, GetCollectionAction, GetForAge, GetGendersAction, GetPlatforms, GetSinglProductAction, GetTypePeau, UpdateProduct } from '../../Services/action/action'
 import Swal from 'sweetalert2'
 import { Plus } from '../../Svg'
 import { useParams } from 'react-router-dom'
@@ -66,8 +66,12 @@ export const UpdateProducts = () => {
     const { updateProduct } = useSelector((st) => st)
     const { getPeau } = useSelector((st) => st)
 
+    const [hit, setHit] = useState(0)
+
     console.warn = function () { };
     console.error = function () { };
+
+    console.log(getSinglProduct.data.hit_status)
 
     const SelectType = (e) => {
         setDetails({ ...details, skinType: e.target.value })
@@ -231,9 +235,6 @@ export const UpdateProducts = () => {
         }
     }
 
-
-    console.log(details.skinType
-        , 'details.skinType')
 
     const delateProduct = (data) => {
         let token = localStorage.getItem('token')
@@ -448,7 +449,7 @@ export const UpdateProducts = () => {
             console.log(getPeau.data[index], '11')
             setDetails({ ...details, skinType: getPeau.data[index] })
         }
-
+        setHit(getSinglProduct.data.hit_status)
     }, [getPeau, getSinglProduct])
 
 
@@ -657,6 +658,9 @@ export const UpdateProducts = () => {
                     />
                 </div>
             </div>
+            <div>
+                <button onClick={() => dispatch(ChangeOrderHit({ product_id: id }))}>{hit ? 'add in hit' : 'remov in hit'}</button>
+            </div>
             <div className='firstBlock'>
                 {photos?.length > 0 && photos.map((e, i) => {
                     return <div className='eachProductPhoto' key={i}>
@@ -682,7 +686,10 @@ export const UpdateProducts = () => {
                     </div>
                 })}
             </div>
-            <div className='firstBlock'>
+            <div >
+                <p>Фотографии</p>
+            </div>
+            <div className='firstBlock' >
                 <Button component="label">
                     <Plus />
                     <VisuallyHiddenInput type="file" onChange={handleFileChange} />

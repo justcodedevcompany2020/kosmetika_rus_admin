@@ -92,7 +92,7 @@ export const OrderList = () => {
                         ]}
                         name={elm.id}
                         phone={elm.order_sum}
-                        date_of_birth={elm.order_status.name_ru}
+                        date_of_birth={elm.order_status?.name_ru}
                         volume={elm.
                             deliver.name
                         }

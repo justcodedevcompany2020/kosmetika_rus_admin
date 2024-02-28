@@ -28,7 +28,7 @@ export const SinglProduct = () => {
     useEffect(() => {
         setData(GetSinglProductPage.data?.products)
         if (GetSinglProductPage.data?.order_status) {
-            setSelectedValue({ name: GetSinglProductPage.data?.order_status.name_ru, id: GetSinglProductPage.data?.order_status.id })
+            setSelectedValue({ name: GetSinglProductPage.data?.order_status?.name_ru, id: GetSinglProductPage.data?.order_status.id })
         }
     }, [GetSinglProductPage])
 

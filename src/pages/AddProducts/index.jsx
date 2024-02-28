@@ -599,6 +599,9 @@ export const AddProducts = () => {
                     </div>
                 ))}
             </div>
+            <div className='LableDiv'>
+                <label>Фотографии</label>
+            </div>
             <div className='firstBlock'>
                 <Button component="label">
                     <Plus />

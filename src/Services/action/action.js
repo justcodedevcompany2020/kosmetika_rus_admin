@@ -1288,3 +1288,30 @@ export const GetTypePeau = () => {
             });
     }
 }
+
+export const ChangeOrderHit = (data) => {
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+    myHeaders.append('Authorization', `Bearer ${token}`);
+
+    var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: JSON.stringify(data),
+    };
+    return (dispatch) => {
+        dispatch(StartGetPadborki())
+        fetch(`${api2}/change_hit_status`, requestOptions)
+            .then((r) => r.json())
+            .then(r => {
+                console.log(r)
+                if (r.status) {
+                    dispatch(SuccessGetPadborki(r.data))
+                }
+            })
+            .catch((error) => {
+                console.log(error)
+                dispatch(ErrorGetPadborki())
+            });
+    }
+}
