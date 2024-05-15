@@ -17,7 +17,7 @@ export const UserScreen = () => {
 
 
     useEffect(() => {
-        setData(GetSinglUserReducer.data?.orders?.data)
+        setData(GetSinglUserReducer.data?.orders)
     }, [GetSinglUserReducer])
     return <div className='UserScreen'>
         <div className='UserScreenHeader'>

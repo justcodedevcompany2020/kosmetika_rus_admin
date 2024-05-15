@@ -18,6 +18,7 @@ export const ReviewBlock = ({ message, product, name, d, star, status, commId, s
     }, [d])
 
     const changeStatus = (id) => {
+        console.log(id)
         dispatch(ChangeStarStatus({ status: id, id: statusid, comment_id: commId, }))
     }
     return <div className='ReviewBlockDiv'>
@@ -45,7 +46,7 @@ export const ReviewBlock = ({ message, product, name, d, star, status, commId, s
             </div>
         </div >
         <div className='ReviewbuttonWrapper'>
-            <Button onClick={() => changeStatus(status == '0' ? 1 : 0)} text={status == '1' ? 'Опубликовать' : 'Удалить'} />
+            <Button onClick={() => changeStatus(status == '0' ? 2 : 0)} text={status == '1' ? 'Опубликовать' : 'Удалить'} />
             <Button onClick={() => changeStatus(0)} black text={'Отклонить'} />
         </div>
     </div>

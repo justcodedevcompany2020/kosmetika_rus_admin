@@ -15,7 +15,6 @@ export const SinglProduct = () => {
         dispatch(GetSinglPorduct({ order_id: id }))
     }, [])
 
-    console.log(GetSinglProductPage.data.deliver?.name)
 
     const [openChangeStatus, setOpenChangeStatus] = useState(false)
     const [selectedValue, setSelectedValue] = useState({ name: '', id: '' })
@@ -59,30 +58,57 @@ export const SinglProduct = () => {
             </div>
         </div>
         <p className='UserName'>{GetSinglProductPage?.data?.name} {GetSinglProductPage?.data?.phone} {GetSinglProductPage?.data?.email}</p>
-        <p className='UserName'>{GetSinglProductPage?.data.city?.name} {GetSinglProductPage?.data?.home_office}  </p>
+        <p className='UserName'>Город:{GetSinglProductPage?.data.citys}</p>
+        <p className='UserName'>{'Адрес: ' + GetSinglProductPage?.data?.address}</p>
+        <p className='UserName'>{'Дом: ' + GetSinglProductPage?.data?.home_office} </p>
+        <p className='UserName'>{GetSinglProductPage?.data.deliver?.id == '2' ? ", Самовывоз" : ""}  </p>
+
+        <p className='UserName'>комментарии: {GetSinglProductPage?.data?.description}  </p>
+
+        {console.log(GetSinglProductPage?.data, '222')}
         {data?.map((elm, i) => {
-            return <div key={i} style={{ marginBottom: '30px' }}>
-                <div style={{ marginBottom: '30px' }}>
-                    <TableItem
-                        noborder
-                        title={[
-                            'Номер заказа',
-                            'Сумма заказа',
-                            'Дата заказа',
-                            'Данные об оплате',
-                            'Способ доставки',
-                            'Способ оплаты'
-                        ]}
-                        name={elm.id}
-                        phone={elm.product.price}
-                        date_of_birth={GetSinglProductPage?.data.order_status?.name_ru}
-                        volume={GetSinglProductPage?.data.deliver?.name}
-                        order_count={GetSinglProductPage?.data.payment_type?.name}
-                        created_at1={elm.created_at}
-                    />
+            if (i == 0)
+                return <div key={i} style={{ marginBottom: '30px' }}>
+                    <div style={{ marginBottom: '30px' }}>
+                        <div className='TableItem' style={{ border: 'none' }}>
+                            <div >
+                                <p className='Tablelabel'>Номер заказа</p>
+                                <p className='TablelItem'>{elm.order_id}</p>
+                            </div>
+                            {GetSinglProductPage.data?.posht && <div >
+                                <p className='Tablelabel'>индекс, город</p>
+                                <p className='TablelItem'>{GetSinglProductPage.data?.posht} , {GetSinglProductPage.data.citys}</p>
+                            </div>}
+                            <div>
+                                <p className='Tablelabel'>Сумма заказа</p>
+                                <p className='TablelItem'>{GetSinglProductPage?.data.order_sum}</p>
+                            </div>
+                            <div>
+                                <p className='Tablelabel'>Дата заказа</p>
+                                <p className='TablelItem'>{new Date(elm.created_at)?.getMonth() + 1}.{new Date(elm.created_at)?.getDate()}.{new Date(elm.created_at)?.getFullYear()}</p>
+
+                            </div>
+                            <div>
+                                <p className='Tablelabel'>Данные об оплате</p>
+                                <p className='TablelItem'>{GetSinglProductPage?.data.order_status?.name_ru}</p>
+                            </div>
+                            <div>
+                                <p className='Tablelabel'>Способ доставки</p>
+
+
+                                <p className='TablelItem'>{GetSinglProductPage?.data.deliver?.name}</p>
+
+                            </div>
+                            <div>
+                                <p className='Tablelabel'>Способ оплаты</p>
+                                <p className='TablelItem'>{GetSinglProductPage?.data.payment_type?.name}</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <UserProduct data={data} />
                 </div>
-                <UserProduct data={elm} />
-            </div>
 
         })}
     </div>

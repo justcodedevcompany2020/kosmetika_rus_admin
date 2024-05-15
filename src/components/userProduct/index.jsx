@@ -1,7 +1,6 @@
 import { Item } from "./item"
 
 export const UserProduct = ({ data }) => {
-    console.log(data, 'data')
     if (Array.isArray(data)) {
         return <div className="UserProduct">
             {data?.map((elm, i) => {

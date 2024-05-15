@@ -3,7 +3,8 @@ export const Item = ({ last, data, product }) => {
     console.log(data)
     return <div className="UserProductItem" id={last ? 'last' : ''}>
         <div className='ImgWrapperUserProduct'>
-            <img className='UserProductImg' src={require('../../Assets/img/22.png')} />
+            <img className='UserProductImg' src={`https://basrarusbackend.justcode.am/uploads/${data.photos
+            [0].photo}`} />
             <div className='UserProductText'>
                 {/* <p className='Artikle'>{data?.name}</p> */}
                 <p className='Krem'>{data?.name}</p>
