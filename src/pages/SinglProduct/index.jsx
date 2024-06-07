@@ -50,17 +50,17 @@ export const SinglProduct = () => {
                     </div>
                 </button>
                 {openChangeStatus && <div className='SelectButton'>
-                    <div onClick={() => ChangeStatus({ name: 'Новый', id: 1 })}>Новый</div>
-                    <div onClick={() => ChangeStatus({ name: 'Подтвержден', id: 2 })}>Подтвержден</div>
-                    <div onClick={() => ChangeStatus({ name: 'Отменен', id: 3 })}>Отменен</div>
-                    <div onClick={() => ChangeStatus({ name: 'Доставлен', id: 4 })}>Доставлен</div>
+                    <div onClick={() => ChangeStatus({ name: 'Оплачен', id: 1 })}>Оплачен</div>
+                    <div onClick={() => ChangeStatus({ name: 'Не оплачен', id: 2 })}>Не оплачен</div>
+                    {/* <div onClick={() => ChangeStatus({ name: 'Отменен', id: 3 })}>Отменен</div> */}
+                    {/* <div onClick={() => ChangeStatus({ name: 'Доставлен', id: 4 })}>Доставлен</div> */}
                 </div>}
             </div>
         </div>
         <p className='UserName'>{GetSinglProductPage?.data?.name} {GetSinglProductPage?.data?.phone} {GetSinglProductPage?.data?.email}</p>
         <p className='UserName'>Город:{GetSinglProductPage?.data.citys}</p>
         <p className='UserName'>{'Адрес: ' + GetSinglProductPage?.data?.address}</p>
-        <p className='UserName'>{'Дом: ' + GetSinglProductPage?.data?.home_office} </p>
+        <p className='UserName'>{'Квартира / Офис: ' + GetSinglProductPage?.data?.home_office} </p>
         <p className='UserName'>{GetSinglProductPage?.data.deliver?.id == '2' ? ", Самовывоз" : ""}  </p>
 
         <p className='UserName'>комментарии: {GetSinglProductPage?.data?.description}  </p>

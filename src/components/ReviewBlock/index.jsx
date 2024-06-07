@@ -6,6 +6,7 @@ import { useDispatch } from 'react-redux'
 import { ChangeStarStatus } from '../../Services/action/action'
 
 export const ReviewBlock = ({ message, product, name, d, star, status, commId, statusid, type }) => {
+    console.log(status)
     const [date, setDate] = useState()
     const [stare, setStare] = useState(['', '', '', '', ''])
     const dispatch = useDispatch()
@@ -46,8 +47,15 @@ export const ReviewBlock = ({ message, product, name, d, star, status, commId, s
             </div>
         </div >
         <div className='ReviewbuttonWrapper'>
-            <Button onClick={() => changeStatus(status == '0' ? 2 : 0)} text={status == '1' ? 'Опубликовать' : 'Удалить'} />
-            <Button onClick={() => changeStatus(0)} black text={'Отклонить'} />
+            <Button onClick={() => changeStatus(2)} text={'Удалить'} />
+            {/* <Button onClick={() => changeStatus(status == '0' ? 2 : 0)} text={status == '1' ? 'Опубликовать' : 'Удалить'} /> */}
+            {/* <Button onClick={() => changeStatus(status == '0' ? 2 : 0)} text={status == '1' ? 'Опубликовать' : 'Удалить'} /> */}
+            {status == 0 &&
+                <Button onClick={() => changeStatus(1)} black text={'Опубликовать'} />
+            }
+            {status == 1 &&
+                <Button onClick={() => changeStatus(0)} black text={'Отклонить'} />
+            }
         </div>
     </div>
 }

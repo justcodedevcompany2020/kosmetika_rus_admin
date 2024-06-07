@@ -41,6 +41,35 @@ export const OrderList = () => {
     useEffect(() => {
         setData(GetAllOrdersReducer?.data?.data)
     }, [GetAllOrdersReducer])
+
+
+    const SaveInfo = async (id) => {
+        let token = localStorage.getItem('token')
+        console.log(id)
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+        myHeaders.append('Authorization', `Bearer ${token}`);
+        var requestOptions = {
+            method: 'GET',
+            headers: myHeaders,
+            // body: JSON.stringify(data),
+        };
+        fetch(`https://basrarusbackend.justcode.am/api/admin/get_order_pdf_file?order_id=${id}`, requestOptions)
+            .then((r) => r.json())
+            .then(r => {
+                console.log(r)
+                if (r.status) {
+                    window.open(r.url, "_blank");
+                }
+                else {
+                    // dispatch(ErrorGetComments())
+                }
+            })
+            .catch((error) => {
+                // dispatch(ErrorGetComments())
+            });
+    }
+
     return <div>
         <div className='header'>
             <p>Список заказов</p>
@@ -70,7 +99,7 @@ export const OrderList = () => {
                         />
                     </div>}
                 </div>
-                <Button green text={'Скачать таблицу'} />
+                {/* <Button green text={'Скачать таблицу'} /> */}
             </div>
         </div>
 
@@ -78,9 +107,11 @@ export const OrderList = () => {
             {
                 data?.map((elm, i) => {
                     if (i == 0) {
-                        console.log(elm, 'elm')
+                        console.log(elm.id, 'elm')
                     }
                     return <TableItem
+                        id={elm.id}
+                        onSave={(e) => SaveInfo(e)}
                         onClick={() => window.location = `/SinglProduct/${elm.id}`}
                         title={[
                             'Номер заказа',

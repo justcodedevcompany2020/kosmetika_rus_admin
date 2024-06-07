@@ -35,7 +35,6 @@ export const UserList = () => {
             <p>Список пользователей</p>
             <div className='buttonWrapper'>
                 <Button onClick={() => setOpenPopUp(true)} text={'PUSH-уведомления'} />
-                <Button green text={'Скачать таблицу'} />
             </div>
         </div>
         {GetUserReducer.loading ?

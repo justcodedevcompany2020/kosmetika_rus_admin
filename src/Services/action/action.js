@@ -1172,6 +1172,7 @@ export const ChangeStarStatus = (data) => {
         fetch(`${api}/change_status_comment`, requestOptions)
             .then((r) => r.json())
             .then(r => {
+                console.log(r)
                 if (r.status) {
                     dispatch(GetComments({ status: data.id }))
                 }

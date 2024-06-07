@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import './style.css'
-export const TableItem = ({ title, img, noborder, onClick = () => { }, name, phone, email, date_of_birth, order_count, created_at, volume, created_at1 }) => {
+import { Button } from '../button'
+import { Button2 } from '../button/button2'
+export const TableItem = ({ id, title, img, noborder, onClick = () => { }, name, phone, email, date_of_birth, order_count, created_at, volume, created_at1, onSave }) => {
     const [date, setDate] = useState()
     useEffect(() => {
         if (created_at) {
@@ -44,6 +46,10 @@ export const TableItem = ({ title, img, noborder, onClick = () => { }, name, pho
             <p className='Tablelabel'>{title[5]}</p>
             <p className='TablelItem'>{order_count}</p>
         </div>
-
+        <div>
+            <Button2 onClick={() => {
+                onSave(id)
+            }} green text={'Скачать таблицу'} />
+        </div>
     </div>
 }

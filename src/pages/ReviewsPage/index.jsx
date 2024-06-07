@@ -26,8 +26,8 @@ export const ReviewsPage = () => {
         <div className='header'>
             <p>Отзывы</p>
             <div className='ReviewsPageButtonWrapper'>
-                <Button green={status == 1} onClick={() => setStatus(1)} text={'Не опубликованные'} />
-                <Button green={status == 0} onClick={() => setStatus(0)} text={'Опубликованные'} />
+                <Button green={status == 0} onClick={() => setStatus(0)} text={'Не опубликованные'} />
+                <Button green={status == 1} onClick={() => setStatus(1)} text={'Опубликованные'} />
             </div>
         </div>
         <div className='ReviewWrapper'>

@@ -27,7 +27,7 @@ export const Main = () => {
     const dispatch = useDispatch()
     useEffect(() => {
         dispatch(GetCategory(2))
-        dispatch(GetSliderAction('first'))
+        dispatch(GetSliderAction('first', 2))
         dispatch(GetCollectionAction())
         dispatch(GetPorductWhitePadborki())
     }, [])
@@ -52,7 +52,7 @@ export const Main = () => {
                     open={openAddBanner}
                     setOpen={setOpenAddBanner}
                     type={banerType}
-                // platformid={selectedBanner}
+                    platformid={2}
                 />
             }
         </div>
